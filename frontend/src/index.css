@@ -1,0 +1,48 @@
+/* src/index.css */
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif; /* Apply the new font */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f4f4f4; /* Add a light background color */
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-links a,
+.navbar-links span {
+  color: white;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+.logout-btn {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+.logout-btn:hover {
+  background-color: #555;
+}
+
+.container {
+  padding: 2rem;
+}

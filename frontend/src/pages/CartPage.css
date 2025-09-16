@@ -1,0 +1,55 @@
+/* frontend/src/pages/CartPage.css */
+.cart-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.cart-empty {
+  text-align: center;
+  padding: 4rem;
+}
+.cart-container {
+  display: flex;
+  gap: 2rem;
+}
+.cart-items-list {
+  flex: 3;
+}
+.cart-summary {
+  flex: 1;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  height: fit-content;
+}
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+}
+.quantity-controls button {
+  width: 30px;
+  height: 30px;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+.remove-btn, .checkout-btn {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.checkout-btn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+.checkout-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

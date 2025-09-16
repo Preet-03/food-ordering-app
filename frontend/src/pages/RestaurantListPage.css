@@ -1,0 +1,20 @@
+.restaurant-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem; /* Adds space between the cards */
+  padding: 1rem;
+}
+
+/* frontend/src/pages/RestaurantListPage.css */
+.restaurants-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.restaurants-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+

@@ -1,0 +1,42 @@
+/* frontend/src/components/RestaurantCard.css */
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 1rem;
+  width: 300px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img {
+  width: 100%;
+  height: 200px; /* This is the key property */
+  object-fit: cover; /* This prevents the image from looking stretched */
+}
+
+.card-body {
+  padding: 1rem;
+  flex-grow: 1; /* This makes the body fill the remaining space */
+}
+
+.card-title {
+  margin: 0 0 0.5rem 0;
+}
+
+.card-text {
+  margin: 0;
+  color: #666;
+}
