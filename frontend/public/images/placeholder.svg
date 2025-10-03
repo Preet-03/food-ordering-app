@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" rx="12" fill="#f3f4f6"/>
+  <g fill="#9ca3af">
+    <rect x="100" y="120" width="600" height="360" rx="8" fill="#e5e7eb"/>
+    <path d="M220 220h360v40H220zM220 290h360v40H220zM220 360h360v40H220z" fill="#d1d5db"/>
+  </g>
+  <text x="50%" y="95%" text-anchor="middle" fill="#6b7280" font-family="Arial, Helvetica, sans-serif" font-size="20">Image unavailable — placeholder</text>
+</svg>

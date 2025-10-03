@@ -1,13 +1,13 @@
 // frontend/src/components/Navbar.jsx
-
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { AuthContext } from '../context/AuthContext';
-import { CartContext } from '../context/CartContext';
+import { useAuth } from '../context/AuthContext';
+import { useCart } from '../context/CartContext';
+import './Navbar.css';
 
 const Navbar = () => {
-  const { user, logout } = useContext(AuthContext);
-  const { cartItems } = useContext(CartContext);
+  const { user, logout } = useAuth();
+  const { cartItems } = useCart();
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -21,10 +21,13 @@ const Navbar = () => {
     <nav className="navbar">
       <Link to="/" className="navbar-brand">FoodApp</Link>
       <div className="navbar-links">
-        <Link to="/cart">Cart ({cartItemCount})</Link> 
+        <Link to="/cart" className="cart-link">
+          🛒
+          {cartItemCount > 0 && <span className="cart-count">{cartItemCount}</span>}
+        </Link>
         {user ? (
           <>
-            <span>Welcome, {user.name}</span>
+            <Link to="/profile">Profile</Link> {/* Added Profile Link */}
             <button onClick={handleLogout} className="logout-btn">Logout</button>
           </>
         ) : (

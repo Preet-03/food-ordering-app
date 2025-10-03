@@ -2,7 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import connectDB from './config/db.js';
-
+import orderRoutes from './routes/orderRoutes.js';
 // Import Routes
 import userRoutes from './routes/userRoutes.js';
 import restaurantRoutes from './routes/restaurantRoutes.js';
@@ -22,6 +22,7 @@ app.use(express.json()); // Allow the server to accept JSON in the request body
 // --- API Routes ---
 app.use('/api/users', userRoutes);
 app.use('/api/restaurants', restaurantRoutes);
+app.use('/api/orders', orderRoutes);
 
 // A simple test route for the root URL
 app.get('/', (req, res) => {

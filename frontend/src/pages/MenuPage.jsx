@@ -1,13 +1,15 @@
 // frontend/src/pages/MenuPage.jsx
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'; // Removed unused useContext import
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import './MenuPage.css'; // We'll create this file
+import { useCart } from '../context/CartContext'; // Import useCart hook
+import './MenuPage.css';
 
 const MenuPage = () => {
   const [restaurant, setRestaurant] = useState(null);
   const [loading, setLoading] = useState(true);
-  const { id } = useParams(); // Get the 'id' from the URL
+  const { id } = useParams();
+  const { addToCart } = useCart(); // Get addToCart from context
 
   useEffect(() => {
     const fetchRestaurant = async () => {
@@ -23,6 +25,13 @@ const MenuPage = () => {
     };
     fetchRestaurant();
   }, [id]);
+
+  const handleAddToCart = (item) => {
+    const itemWithRestaurant = { ...item, restaurantId: restaurant._id };
+    addToCart(itemWithRestaurant);
+    // Show success alert
+    alert(`${item.name} has been added to your cart! 🛒`);
+  };
 
   if (loading) {
     return <div>Loading...</div>;
@@ -44,13 +53,19 @@ const MenuPage = () => {
       <div className="menu-items">
         {restaurant.menu.map((item) => (
           <div key={item._id} className="menu-item">
-            <div>
-              <h3>{item.name}</h3>
-              <p>{item.description}</p>
+            <img src={item.image} alt={item.name} className="menu-item-img" />
+            <div className="menu-item-body">
+              <h3 className="menu-item-title">{item.name}</h3>
+              <p className="menu-item-desc">{item.description}</p>
             </div>
             <div className="menu-item-price">
               <span>₹{item.price}</span>
-              <button className="add-to-cart-btn">+</button>
+              <button 
+                className="add-to-cart-btn" 
+                onClick={() => handleAddToCart(item)}
+              >
+                Add
+              </button>
             </div>
           </div>
         ))}

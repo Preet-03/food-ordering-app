@@ -3,10 +3,16 @@ import express from 'express';
 const router = express.Router();
 import {
   getRestaurants,
-  getRestaurantById, // Import the new function
+  getRestaurantById,
+  searchRestaurants,
+  getAllProducts,
+  getSortedMenuItems,
 } from '../controllers/restaurantController.js';
 
 router.route('/').get(getRestaurants);
-router.route('/:id').get(getRestaurantById); // Add the new route
+router.route('/search').get(searchRestaurants);
+router.route('/products').get(getAllProducts);
+router.route('/menu-items/sorted').get(getSortedMenuItems);
+router.route('/:id').get(getRestaurantById);
 
 export default router;

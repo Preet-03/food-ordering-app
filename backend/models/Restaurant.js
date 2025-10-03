@@ -5,6 +5,8 @@ const menuSchema = new mongoose.Schema({
   name: { type: String, required: true },
   price: { type: Number, required: true },
   description: { type: String },
+  image: { type: String, required: true },
+  rating: { type: Number, default: 4.0, min: 1, max: 5 },
 });
 
 const restaurantSchema = new mongoose.Schema(

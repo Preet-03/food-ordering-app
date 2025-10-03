@@ -26,6 +26,21 @@ const importData = async () => {
   }
 };
 
-// To run this script, we'll add a command to package.json
-// It checks for a command line argument "-d" to destroy data if needed
-importData();
+const destroyData = async () => {
+  try {
+    await Restaurant.deleteMany();
+    // await User.deleteMany();
+
+    console.log('Data Destroyed!');
+    process.exit();
+  } catch (error) {
+    console.error(`Error: ${error}`);
+    process.exit(1);
+  }
+};
+
+if (process.argv[2] === '-d') {
+  destroyData();
+} else {
+  importData();
+}
