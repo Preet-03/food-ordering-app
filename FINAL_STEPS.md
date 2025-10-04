@@ -12,17 +12,17 @@ Go to your **backend service** on Render and add/update this environment variabl
 
 ### Required Environment Variable:
 ```
-FRONTEND_URL = https://your-frontend-app.onrender.com
+FRONTEND_URL = https://food-ordering-app-frontend1-ovsw.onrender.com
 ```
 
-**Replace** `https://your-frontend-app.onrender.com` with your actual Render frontend URL.
+This is your actual frontend URL that needs to be whitelisted in CORS.
 
 ### How to Add Environment Variable on Render:
 1. Go to Render Dashboard → Your Backend Service
 2. Click "Environment" in the left sidebar
 3. Add the variable:
    - **Key:** `FRONTEND_URL`
-   - **Value:** Your frontend URL (e.g., `https://food-ordering-app-xyz.onrender.com`)
+   - **Value:** `https://food-ordering-app-frontend1-ovsw.onrender.com`
 4. Click "Save Changes"
 5. Service will automatically redeploy
 
@@ -75,7 +75,7 @@ All API calls now use the centralized axios config from `frontend/src/api/axios.
 PORT=5000
 MONGO_URI=mongodb+srv://test_1:u3dDMQRTgm2z5Rj4@cluster0.2ylu1gh.mongodb.net/
 JWT_SECRET=somerandomsecretstring123!@#
-FRONTEND_URL=https://your-frontend-app.onrender.com  👈 ADD THIS!
+FRONTEND_URL=https://food-ordering-app-frontend1-ovsw.onrender.com  👈 ADD THIS!
 EMAIL_USER=ptsa1209@gmail.com
 EMAIL_PASS=mejcymhyeufjmqpp
 ```
