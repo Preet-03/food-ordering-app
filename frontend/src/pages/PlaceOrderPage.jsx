@@ -11,6 +11,7 @@ const PlaceOrderPage = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
   const [isPlacingOrder, setIsPlacingOrder] = useState(false);
+  const [paymentMethod, setPaymentMethod] = useState('Cash on Delivery');
 
   if (!user) {
     navigate('/register');
@@ -84,7 +85,7 @@ const PlaceOrderPage = () => {
         taxPrice,
         shippingPrice,
         totalPrice,
-        paymentMethod: 'Card Payment',
+        paymentMethod,
       });
       
       clearCart();
@@ -190,6 +191,25 @@ const PlaceOrderPage = () => {
                     `₹${shippingPrice.toFixed(2)}`
                   )}
                 </span>
+              </div>
+              
+              <div className="summary-row">
+                <span className="summary-label">Payment Method</span>
+                <select 
+                  value={paymentMethod} 
+                  onChange={(e) => setPaymentMethod(e.target.value)}
+                  style={{
+                    padding: '0.5rem',
+                    border: '1px solid #e9ecef',
+                    borderRadius: '5px',
+                    fontSize: '0.9rem',
+                    cursor: 'pointer'
+                  }}
+                >
+                  <option value="Cash on Delivery">Cash on Delivery</option>
+                  <option value="Card Payment">Card Payment</option>
+                  <option value="UPI">UPI</option>
+                </select>
               </div>
               
               <div className="summary-row total">

@@ -107,9 +107,10 @@
 
 .section-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-bottom: 1rem;
+  position: relative;
 }
 
 .section-title {
@@ -120,6 +121,10 @@
   align-items: center;
   gap: 0.5rem;
   font-weight: 600;
+}
+
+h2.section-title {
+  font-size: 1.3rem;
 }
 
 .section-icon {
@@ -135,6 +140,8 @@
   background: rgba(0, 123, 255, 0.1);
   transition: all 0.2s ease;
   font-size: 0.9rem;
+  position: absolute;
+  right: 0;
 }
 
 .edit-link:hover {

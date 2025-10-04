@@ -42,9 +42,9 @@ const ProductCard = ({ product, restaurant, showItemRating = false }) => {
             <span className="restaurant-cuisine">🍽️ {restaurant.cuisine}</span>
             <div className="rating-section">
               {showItemRating && product.rating ? (
-                <span className="item-rating">⭐ {product.rating.toFixed(1)} (Item)</span>
+                <span className="item-rating">⭐ {product.rating.toFixed(1)}</span>
               ) : (
-                <span className="restaurant-rating">⭐ {restaurant.rating} (Rest.)</span>
+                <span className="restaurant-rating">⭐ {restaurant.rating}</span>
               )}
             </div>
           </div>

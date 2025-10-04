@@ -11,7 +11,7 @@ const RestaurantCard = ({ restaurant }) => {
         <div className="card-body">
           <h3 className="card-title">{restaurant.name}</h3>
           <p className="card-text">{restaurant.cuisine}</p>
-          <p className="card-text">Rating: {restaurant.rating} ⭐</p>
+          <p className="card-text">{restaurant.rating} ⭐</p>
         </div>
       </div>
     </Link>
