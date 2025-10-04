@@ -4,7 +4,7 @@
 
 ### Frontend URL (Render):
 ```
-https://food-ordering-app-frontend1-ovsw.onrender.com
+https://food-ordering-app-frontend-zh2d.onrender.com
 ```
 
 ### Backend URL (Render):
@@ -23,7 +23,7 @@ https://food-ordering-app-backend-fgh4.onrender.com
 3. **Click:** "Environment" tab on the left
 4. **Add/Update this variable:**
    - **Key:** `FRONTEND_URL`
-   - **Value:** `https://food-ordering-app-frontend1-ovsw.onrender.com`
+   - **Value:** `https://food-ordering-app-frontend-zh2d.onrender.com`
 5. **Click:** "Save Changes"
 6. **Wait:** For automatic redeploy (~2-3 minutes)
 
@@ -61,7 +61,7 @@ Should return JSON array of restaurants
 
 ### 3. Test Frontend:
 ```
-https://food-ordering-app-frontend1-ovsw.onrender.com
+https://food-ordering-app-frontend-zh2d.onrender.com
 ```
 
 **Open DevTools (F12) → Network Tab:**
@@ -75,7 +75,7 @@ https://food-ordering-app-frontend1-ovsw.onrender.com
 
 ### ❌ CORS Error
 **Cause:** FRONTEND_URL doesn't match  
-**Fix:** Verify it's exactly `https://food-ordering-app-frontend1-ovsw.onrender.com` (no trailing slash)
+**Fix:** Verify it's exactly `https://food-ordering-app-frontend-zh2d.onrender.com` (no trailing slash)
 
 ### ❌ Network Error / Failed to Fetch
 **Cause:** Backend not reachable  
@@ -101,7 +101,7 @@ https://food-ordering-app-frontend1-ovsw.onrender.com
 PORT=5000
 MONGO_URI=mongodb+srv://test_1:u3dDMQRTgm2z5Rj4@cluster0.2ylu1gh.mongodb.net/
 JWT_SECRET=somerandomsecretstring123!@#
-FRONTEND_URL=https://food-ordering-app-frontend1-ovsw.onrender.com
+FRONTEND_URL=https://food-ordering-app-frontend-zh2d.onrender.com
 EMAIL_USER=ptsa1209@gmail.com
 EMAIL_PASS=mejcymhyeufjmqpp
 ```
