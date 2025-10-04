@@ -1,9 +1,8 @@
-// frontend/src/pages/PlaceOrderPage.jsx
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext';
-import axios from 'axios';
+import axios from '../api/axios';
 import './PlaceOrderPage.css';
 
 const PlaceOrderPage = () => {

@@ -1,7 +1,7 @@
 // frontend/src/pages/MenuPage.jsx
 import React, { useState, useEffect } from 'react'; // Removed unused useContext import
 import { useParams } from 'react-router-dom';
-import axios from 'axios';
+import axios from '../api/axios';
 import { useCart } from '../context/CartContext'; // Import useCart hook
 import './MenuPage.css';
 

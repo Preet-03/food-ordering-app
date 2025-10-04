@@ -1,7 +1,7 @@
 // frontend/src/pages/RestaurantListPage.jsx
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import axios from 'axios';
+import axios from '../api/axios';
 import RestaurantCard from '../components/RestaurantCard';
 import ProductCard from '../components/ProductCard';
 import FilterSlider from '../components/FilterSlider';
